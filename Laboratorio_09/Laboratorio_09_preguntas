@@ -1,0 +1,21 @@
+1. ¿Qué es una coroutine en Kotlin y cómo se diferencia de un hilo
+tradicional?
+
+Las corutine son una forma concurrente, permitiendo que el codigo se realice de manera asincrona. Son muy parecidos a los hilos pero estos pueden consumir menos recursos y se posee más control sobre su ejecución. Es no bloqueante permitiendo ejecutar acciones en el hilo principal sin interrupcion.
+
+2. ¿Cuál es la importancia de la suspensión en las coroutines y cómo se
+implementa?
+
+Es lo que permite un codigo asíncrono y no bloqueante, ya que tiene la capacidad de suspender momentaneamente la ejecucion de una corutine sin obstruir el main thread. Al suspenderse una corutine, el hilo que estaba utilizando se libera y otras corutines o acciones pueden utilizarlo.
+
+
+3. ¿Cuál es el propósito del Dispatcher en las coroutines y cómo se elige
+uno adecuado para cada tarea?
+
+La función de un Dispatcher es especificar en qué hilo (o hilos) se ejecutará una coroutine. Son sumamente útiles ya que existen tareas de Input/Output de red o de archivos , que no pueden realizarse en el hilo principal.
+
+4. ¿Cuál es el propósito y el uso de la función async en las coroutines?
+
+async: Constructor utilizado para lanzar coroutines de manera asíncrona se obtiene el resultado
+utilizando el objeto Deferred. El resultado se obtiene mediante la función await(). Y es útil cuando se
+deben ejecutar tareas concurrentes y combinar los resultados.
